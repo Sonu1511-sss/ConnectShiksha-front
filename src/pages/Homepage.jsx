@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from '../components/Hero'
 import Journey from '../components/Journey'
-import Workshops from '../components/Workshops'
+// import Workshops from '../components/Workshops'
 import Courses from '../components/Courses'
 import Achievements from '../components/Achievements'
 import Youtube from '../components/YouTube'
@@ -12,7 +12,7 @@ function Homepage() {
   <>
       <Hero />
       <Journey/>
-      <Workshops/>
+      {/* <Workshops/> */}
       <Courses/>
       <Achievements/>
       <Youtube/>

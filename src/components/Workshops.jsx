@@ -5,7 +5,7 @@ const Workshops = () => {
   return (
     <section
       id="workshops"
-      className="py-20 px-6 md:px-16 bg-[#1E3A8A] text-white"
+      className="py-20 px-6 md:px-16 bg-white text-[#1E3A8A]"
     >
       <h3 className="text-4xl font-extrabold text-center mb-16">
         Upcoming Workshops

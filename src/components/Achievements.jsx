@@ -1,3 +1,4 @@
+// Achievements.jsx
 import React from "react";
 import { motion } from "framer-motion";
 import { FaUsers, FaChalkboardTeacher, FaRobot, FaTools } from "react-icons/fa";
@@ -27,7 +28,7 @@ const achievements = [
 
 const Achievements = () => {
   return (
-    <section className="bg-[#1E3A8A] text-white py-20 px-6 md:px-20">
+    <section id="achievements" className="bg-[#1E3A8A] text-white py-20 px-6 md:px-20">
       <h2 className="text-4xl font-extrabold text-center mb-14">Our Achievements</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">

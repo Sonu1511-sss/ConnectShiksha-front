@@ -3,83 +3,73 @@ import {
   FaLinkedin,
   FaInstagram,
   FaYoutube,
-  FaTwitter,
-  FaPhone,
-  FaEnvelope,
-  FaMapMarkerAlt,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1E3A8A] text-white">
+    <footer className="bg-gray-900 text-white">
       {/* Top Section */}
-      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
-        
+      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* Logo & Description */}
         <div>
-          <div className="flex items-center gap-2 mb-4">
+          <div className="flex items-center gap-3 mb-4">
             <img
-              src="https://yt3.ggpht.com/0q_LVnVkDCA_OwPmn8dzYNdBB1e7tWZnY5YzNVMqYM8kwvPyhWNGK5Qx1URZd4Jl6IK2MHd7ZQ=s88-c-k-c0x00ffffff-no-rj"
+              src="https://connectshiksha.com/assets/mainlogo-BVXvkrYL.png" // Replace with your logo
               alt="Logo"
-              className="w-10 h-10 object-contain rounded-full"
+              className="w-[16rem] h-[7rem] object-contain"
             />
-            <span className="text-2xl font-bold text-yellow-400">ConnectShiksha</span>
           </div>
-          <p className="text-gray-200 mb-4">
-            Empowering individuals and businesses with cutting-edge technology
-            education and digital solutions.
+          <p className="text-gray-400 leading-relaxed">
+            Connect-Shiksha, a community dedicated to providing teaching,
+            learning, and guidance to students in rural areas.
           </p>
-          <div className="flex gap-4">
-            <a href="#" className="bg-white text-[#0077B5] p-2 rounded-full hover:scale-110 transition">
-              <FaLinkedin />
-            </a>
-            <a href="#" className="bg-white text-pink-600 p-2 rounded-full hover:scale-110 transition">
-              <FaInstagram />
-            </a>
-            <a href="#" className="bg-white text-red-600 p-2 rounded-full hover:scale-110 transition">
-              <FaYoutube />
-            </a>
-            <a href="#" className="bg-white text-blue-500 p-2 rounded-full hover:scale-110 transition">
-              <FaTwitter />
-            </a>
-          </div>
         </div>
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-xl font-semibold text-yellow-400 mb-4">Quick Links</h3>
-          <ul className="space-y-2 text-gray-200">
-            <li><a href="#" className="hover:text-yellow-400 transition">Courses</a></li>
-            <li><a href="#" className="hover:text-yellow-400 transition">Business Services</a></li>
+          <h3 className="text-lg font-semibold text-white mb-4">QUICK LINKS</h3>
+          <ul className="space-y-3 text-gray-400 text-base">
             <li><a href="#" className="hover:text-yellow-400 transition">About Us</a></li>
+            <li><a href="#" className="hover:text-yellow-400 transition">Our Gallery</a></li>
             <li><a href="#" className="hover:text-yellow-400 transition">Contact Us</a></li>
+          </ul>
+        </div>
+
+        {/* Important Links */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-4">IMPORTANT LINKS</h3>
+          <ul className="space-y-3 text-gray-400 text-base">
+            <li><a href="#" className="hover:text-yellow-400 transition">Privacy Policy</a></li>
+            <li><a href="#" className="hover:text-yellow-400 transition">Terms & Conditions</a></li>
+            <li><a href="#" className="hover:text-yellow-400 transition">Refund Policy</a></li>
           </ul>
         </div>
 
         {/* Contact Info */}
         <div>
-          <h3 className="text-xl font-semibold text-yellow-400 mb-4">Contact Us</h3>
-          <div className="flex items-start gap-3 mb-3 text-gray-200">
-            <FaMapMarkerAlt className="mt-1" />
-            <p>
-              In Front of Sindhu Bhavan Gondia <br /> Road Balaghat (M.P)
-            </p>
-          </div>
-          <div className="flex items-center gap-3 mb-3 text-gray-200">
-            <FaPhone />
-            <p>+91 9131782103 , +91 7748893097
-</p>
-          </div>
-          <div className="flex items-center gap-3 text-gray-200">
-            <FaEnvelope />
-            <p>info@ConnectShiksha.in</p>
+          <h3 className="text-lg font-semibold text-white mb-4">CONTACT</h3>
+          <p className="text-gray-400 mb-2">9131782103 , 7748893097</p>
+          <p className="text-gray-400 mb-2">connectshikshaofficial@gmail.com</p>
+          <p className="text-gray-400 mb-4">
+            In Front of Sindhu Bhavan Gondia Road Balaghat (M.P)
+          </p>
+          {/* Social Icons */}
+          <div className="flex gap-4">
+            <a href="#" className="text-white text-2xl hover:text-yellow-400 transition"><FaYoutube /></a>
+            <a href="#" className="text-white text-2xl hover:text-yellow-400 transition"><FaLinkedin /></a>
+            <a href="#" className="text-white text-2xl hover:text-yellow-400 transition"><FaInstagram /></a>
+            <a href="#" className="text-white text-2xl hover:text-yellow-400 transition"><FaWhatsapp /></a>
           </div>
         </div>
       </div>
 
+      {/* Divider */}
+      <div className="border-t border-gray-700"></div>
+
       {/* Bottom Bar */}
-      <div className="bg-[#1E3A8A] text-yellow text-center py-4 text-sm font-medium">
-        &copy; {new Date().getFullYear()} ConnectShiksha. All rights reserved.
+      <div className="bg-gray-900 text-gray-400 text-center py-5 text-sm font-medium">
+        &copy; Connect Shiksha {new Date().getFullYear()} - All rights reserved
       </div>
     </footer>
   );
