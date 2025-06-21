@@ -18,10 +18,10 @@ const Hero = () => {
           
           <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
             <button className="bg-blue-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-blue-800 transition duration-300">
-              Explore Courses
+           <a href="/Course">Explore Courses</a>   
             </button>
             <button className="border-2 border-blue-700 text-blue-700 font-semibold px-8 py-3 rounded-full hover:bg-blue-700 hover:text-white transition duration-300">
-              Book Workshop
+             <a href="/workshop">Book Workshop</a> 
             </button>
           </div>
 
