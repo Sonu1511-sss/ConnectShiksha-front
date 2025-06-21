@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+/* index.css or globals.css */
+@keyframes floatX {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}
+
+.floating-img {
+  animation: floatX 3s ease-in-out infinite;
+}

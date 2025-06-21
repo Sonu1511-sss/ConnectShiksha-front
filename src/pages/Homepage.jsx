@@ -6,6 +6,7 @@ import Courses from '../components/Courses'
 import Achievements from '../components/Achievements'
 import Youtube from '../components/YouTube'
 import AppBanner from '../components/AppBanner'
+import Testimonials from '../components/Testimonials'
 
 function Homepage() {
   return (
@@ -16,6 +17,7 @@ function Homepage() {
       <Courses/>
       <Achievements/>
       <Youtube/>
+      <Testimonials/>
       <AppBanner/>
   </>
   )

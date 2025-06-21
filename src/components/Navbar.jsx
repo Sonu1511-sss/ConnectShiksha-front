@@ -19,11 +19,9 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <img
-            src={logo}
-            alt="Logo"
-            className="w-36 h-auto object-contain"
-          />
+          <a href="/">
+            <img src={logo} alt="Logo" className="w-36 h-auto object-contain" />
+          </a>
         </div>
 
         {/* Desktop Menu */}
