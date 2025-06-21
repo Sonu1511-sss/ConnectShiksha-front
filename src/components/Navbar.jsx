@@ -7,11 +7,11 @@ function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const navItems = [
-    { name: "Courses", href: "#courses" },
-    { name: "Workshops", href: "#workshops" },
-    { name: "Products", href: "#products" },
-    { name: "Community", href: "#community" },
-    { name: "Contact", href: "#contact" },
+    { name: "Courses", href: "/Course" },
+    { name: "Workshops", href: "/workshop" },
+    { name: "Products", href: "/products" },
+    { name: "Community", href: "/AboutsUs" },
+    { name: "Contact", href: "/Contact" },
   ];
 
   return (
