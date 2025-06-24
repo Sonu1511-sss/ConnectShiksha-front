@@ -8,6 +8,7 @@ import CoursePage from './pages/CoursePage';
 import AboutUsPage from './pages/AboutUsPage';
 import ProductsPage from './pages/ProductsPage';
 import ContactUsPage from './pages/ContactUsPage';
+import CourseDetailPage from './components/CourseDetailPage';
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/AboutsUs" element={<AboutUsPage />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/Contact" element={<ContactUsPage />} />
+          <Route path="/courses/:id" element={<CourseDetailPage />} />
 
 
 

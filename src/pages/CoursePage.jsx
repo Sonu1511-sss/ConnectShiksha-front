@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FaStar, FaArrowRight } from "react-icons/fa";
-
 const courses = [
   {
+    id: "web-development",
     title: "Web Development",
     description: "Learn HTML, CSS, JS, React & build dynamic websites.",
     image: "https://www.cdmi.in/courses@2x/web-developments.webp",
@@ -10,6 +11,7 @@ const courses = [
     mode: "Online",
   },
   {
+    id: "java-dsa",
     title: "Java + DSA",
     description: "Master core Java and crack coding interviews with DSA.",
     image:
@@ -18,6 +20,7 @@ const courses = [
     mode: "Offline",
   },
   {
+    id: "iot-automation",
     title: "IoT & Automation",
     description: "Connect devices with real-time sensors and cloud tools.",
     image:
@@ -26,6 +29,7 @@ const courses = [
     mode: "Online",
   },
   {
+    id: "graphics-design",
     title: "Graphics Design",
     description: "Design stunning visuals using Photoshop & Illustrator.",
     image:
@@ -34,6 +38,7 @@ const courses = [
     mode: "Offline",
   },
   {
+    id: "video-editing",
     title: "Video Editing",
     description: "Edit pro-level videos using Premiere Pro & After Effects.",
     image:
@@ -42,6 +47,7 @@ const courses = [
     mode: "Online",
   },
   {
+    id: "ai-ml",
     title: "AI & Machine Learning",
     description: "Learn Python, data science, and AI project building.",
     image:
@@ -50,6 +56,7 @@ const courses = [
     mode: "Online",
   },
 ];
+
 
 const CourseGrid = () => {
   return (
@@ -63,55 +70,44 @@ const CourseGrid = () => {
 
       {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {courses.map((course, index) => (
-          <div
-            key={index}
-            className="bg-white border rounded-xl shadow-sm hover:shadow-lg transition overflow-hidden"
+        {courses.map((course) => (
+          <Link
+            to={`/courses/${course.id}`}
+            key={course.id}
+            className="bg-white border rounded-xl shadow hover:shadow-xl transition overflow-hidden"
           >
             <img
               src={course.image}
               alt={course.title}
               className="w-full h-48 object-cover"
             />
-
             <div className="p-5">
               <h3 className="text-lg font-bold text-blue-800 mb-1">
                 {course.title}
               </h3>
-              <p className="text-gray-600 text-sm mb-4">
+              <p className="text-gray-600 text-sm mb-3">
                 {course.description}
               </p>
-
-              {/* Mode & Rating */}
-              <div className="flex items-center justify-between text-sm mb-4">
+              <div className="flex justify-between text-sm mb-3">
                 <span
-                  className={`${
+                  className={`font-semibold ${
                     course.mode === "Online"
                       ? "text-blue-600"
                       : "text-purple-600"
-                  } font-semibold`}
+                  }`}
                 >
                   {course.mode}
                 </span>
-                <div className="flex items-center gap-1 text-yellow-500">
-                  <FaStar /> <span>{course.rating}</span>
-                </div>
+                <span className="flex items-center gap-1 text-yellow-500">
+                  <FaStar /> {course.rating}
+                </span>
               </div>
-
-              {/* Enroll Button */}
-              <button className="w-full py-2.5 text-sm rounded-full font-semibold text-white bg-blue-600 hover:bg-blue-700 transition flex items-center justify-center gap-2">
-                Enroll Now <FaArrowRight className="text-white text-xs" />
-              </button>
+              <div className="bg-blue-600 text-white text-sm font-medium py-2 px-3 rounded-full flex items-center justify-center gap-2 hover:bg-blue-700">
+                Enroll Now <FaArrowRight />
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
-      </div>
-
-      {/* Join Community CTA */}
-      <div className="text-center mt-12">
-        <button className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-full text-base font-semibold shadow">
-          Join Our Community
-        </button>
       </div>
     </section>
   );
